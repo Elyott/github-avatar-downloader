@@ -41,15 +41,15 @@ function getRepoContributors(repoOwner, repoName, cb) {
     });
     cb(err, body);
   });
-};
+}
 
 
 // this makes sure both inputs are present from the termina;
 if(repoName === undefined){
-    console.log("You need to enter both Owner and Repo names!")
+    console.log("You need to enter both Owner and Repo names!");
   }else{
     getRepoContributors(repoName, repoOwner, function(err, result) {
       console.log("Errors:", err);
       console.log("Result:", result);
     });
-}
+};
